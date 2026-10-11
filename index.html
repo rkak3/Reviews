@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>آراء الطلاب في شرح المقررات</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;--bg:#fbfaf0;--bg2:#eef5dc;--ink:#34502a;--mut:#7d8a6c;--ac:#5a8c3a;--sh:0 4px 14px rgba(120,160,70,.14);--hb:linear-gradient(160deg,#e4f1c8,#c4e0a2)}
+html{background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tajawal,system-ui,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink)}
+.app{max-width:600px;margin:0 auto;min-height:100vh;padding-bottom:40px}
+.hero{padding:34px 22px 30px;background:var(--hb);border-radius:0 0 40px 40px}
+.hero.s{padding:20px 22px 22px;border-radius:0 0 30px 30px}
+.badge{display:inline-block;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.65)}
+h1{font-size:30px;line-height:1.35;margin:14px 0 10px;font-weight:800}
+.s h1{font-size:23px;margin:10px 0 0}
+.hero p{margin:0;font-size:16px;line-height:1.9;opacity:.88}
+.hero b{border-bottom:2px solid rgba(0,0,0,.18)}
+.wrap{padding:0 18px}
+h2{font-size:16px;margin:24px 0 10px;color:var(--mut);font-weight:700}
+.cs{display:flex;flex-direction:column;gap:10px}
+.c{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border-radius:20px;padding:16px;box-shadow:var(--sh);font:700 17px Tajawal,sans-serif;color:var(--ink);border:0;width:100%;text-align:right;cursor:pointer}
+.c small,.chip{font:700 12.5px Tajawal,sans-serif;background:var(--bg2);padding:4px 10px;border-radius:999px;direction:ltr}
+.q{margin:22px 0;background:#fff;border-radius:20px 20px 20px 5px;padding:18px;box-shadow:var(--sh);line-height:1.9}
+.q em{display:block;margin-top:8px;font-style:normal;font-size:13px;color:var(--mut)}
+.cta{display:block;width:100%;text-align:center;font:800 17px Tajawal,sans-serif;color:var(--ink);background:var(--hb);border:0;border-radius:16px;padding:15px;cursor:pointer;box-shadow:var(--sh)}
+.note{text-align:center;font-size:12.5px;color:var(--mut);margin-top:12px}
+.back{background:rgba(255,255,255,.65);border:0;border-radius:999px;padding:6px 14px;font:700 13px Tajawal,sans-serif;color:var(--ink);cursor:pointer}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 18px 4px;scrollbar-width:none}
+.tabs button{flex:none;font:700 14px Tajawal,sans-serif;border:1px solid #d6e5bb;background:#fff;color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.tabs button.on{background:#cfe6ad;border-color:#b5d08c}
+.r{background:#fff;border-radius:20px;padding:16px;box-shadow:var(--sh);margin-bottom:12px}
+.r .t{line-height:1.95;white-space:pre-line;overflow-wrap:anywhere}
+.r .m{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;color:var(--mut)}
+.rt{font:700 12.5px Tajawal,sans-serif;padding:4px 12px;border-radius:999px;color:var(--ink)}
+.rt.a{background:#d9efbf}.rt.b{background:#f1f2c4}.rt.c2{background:#fbdcc6}
+.home{text-align:center}
+.home h1{margin:14px 0 10px}
+.home p{font-size:16px;line-height:1.9;opacity:.88}
+.badge2{display:inline-block;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--bg2)}
+.gap{height:24px}.gap2{height:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chips span{background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;box-shadow:var(--sh)}
+.chips small{margin-right:6px}
+.trust{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;box-shadow:var(--sh)}
+.trust i{font-style:normal;background:#cfe6ad;border-radius:50%;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.top{text-align:center;background:var(--hb);padding:52px 22px 70px;border-radius:0 0 46px 46px}
+.top .badge{background:rgba(255,255,255,.65)}
+.top h1{margin:6px 0 0}
+.top p{font-size:16px;line-height:1.9;opacity:.88}
+.home{padding:0 22px 40px}
+.pull{margin-top:-30px;text-align:center}
+.top{padding-bottom:64px}
+.sheet{background:#fff;border-radius:28px;box-shadow:0 8px 24px rgba(120,160,70,.18);margin:-34px 18px 30px;overflow:hidden}
+.sheet .sh{padding:18px 18px 8px;font-size:14px;font-weight:700;color:var(--mut)}
+.sheet .row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:16px 18px;border-top:1px solid #eef2e2;font-weight:700;font-size:17px}
+.sheet .act{padding:16px 18px;border-top:1px solid #eef2e2}
+.sheet .foot{display:flex;align-items:center;gap:10px;background:var(--bg2);padding:14px 18px;font-size:13.5px;font-weight:700;line-height:1.6}
+.sheet .foot i{font-style:normal;background:#cfe6ad;border-radius:50%;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.sheet{margin-bottom:16px}
+.fcard{background:var(--hb);border-radius:26px;padding:22px 16px 16px;text-align:center;margin:0 18px 30px;box-shadow:var(--sh)}
+.fcard h3{margin:0 0 6px;font-size:19px;font-weight:800}
+.fcard p{margin:0 0 14px;font-size:14.5px;line-height:1.8;opacity:.88}
+.frow{display:flex;align-items:center;gap:8px;background:#fff;border-radius:16px;padding:13px 14px;margin-top:8px;font-weight:700;font-size:16px;color:var(--ink);text-decoration:none;text-align:right}
+.frow span{flex:1}
+.frow em{font-style:normal;font-size:13.5px;background:var(--bg2);border-radius:999px;padding:5px 12px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tile{background:rgba(255,255,255,.75);border-radius:20px;padding:16px 6px;text-align:center;font-weight:800;font-size:14px;line-height:1.5;color:var(--ink);text-decoration:none}
+.tile small{display:block;margin:0 auto 8px;width:max-content;font:700 12.5px Tajawal,sans-serif;background:var(--bg2);padding:4px 10px;border-radius:999px;direction:ltr}
+.sheet .row small{font:700 12.5px Tajawal,sans-serif;background:var(--bg2);padding:4px 10px;border-radius:999px;direction:ltr}
+</style>
+</head>
+<body>
+<div class="app" id="v"></div>
+<script>
+const COURSES=[["MIS243","أسس برمجة"],["MIS354","برمجة الحاسب 2"],["MIS353","إدارة الشبكات"]];
+const DATA={"MIS243": [["كويسه جداً", "ممتاز"], ["ممتاز جدًا ماشاء الله تبارك الله وواضحة بالنسبة لي كثير و لا حظت فرق الشرح عن شخص اخر بدرجة الاختبار", "ممتاز"], ["طريقة الشرح ممتازة جدًا في توضيح الفكرة وتبسيطها بشكل جميل", "ممتاز"], ["مختصرة وواضحه جدا", "ممتاز"], ["جدًا ممتازه الصدق", "ممتاز"], ["حلوة", "ممتاز"], ["ماشاء الله الشرح جدا واضح وطريقتك بالشرح تثبت المعلومه ولا حظت فرق بالدرجات من بعد شرحك", "ممتاز"], ["الشرح جميل جدا واضح  من اروع المقاطع الي تابعتهم صراحة", "ممتاز"], ["جميلة جدًا ومختصرة", "ممتاز"], ["رائعه", "ممتاز"], ["ماشاءالله جدا ممتازه", "جيد جدا"], ["جميل و مرتب انا عنفسي احب الشرح المختصر و هذا الي حصلته في شرح اسس برمجه 1", "ممتاز"], ["رائع", "ممتاز"], ["جميل جدا وواضح وطريقة مبسطه للفهم", "ممتاز"], ["ممتازة ومساعدة جدًا", "ممتاز"], ["جداً مفهوم الشرح وكل نقطه تشرحها من قلب", "ممتاز"], ["شرح خيااالي ماتفوت عليك تفصيلة وحده ماشاءالله", "ممتاز"], ["حلوه مره وخصوصاً للمبتدىء لأنها توضح بالتفصيل", "يحتاج تحسين"], ["شرح جدًا ممتاز و سلسل وبدون ملل اذا جيت اتابع الشرح صدق حبييت 👌🏻", "ممتاز"], ["قسم بالله ماشاء لله فنانه كامله والكامل الله", "ممتاز"], ["للامانه كان شرح ممتاز ولا فيه اي مشكلة بس كان ناقصه شي واحد وهاذا رأيي أتمنى تتقبلينه حسيت ان الشرح ياخذ وقت أكثر من اللازم ودي توصلين المعلومه بدون كلام زايد عشان مايتشتت تركيز الطالب هو شي جميل جداً انه توصلين معلومه عن الموضوع الفلاني قبل تبدأين بس مثل المادة ذي محد بيهتم بالشيء الكثير يعني أفضل شي يكون قبل تبدأين بالفصل تشرحين شرح مبدئي في حال ماوصلت المعلومه ناخذ مثال و هكذا و لا للأمانة شرحك ممتاز جداً اغلب طلاب محافظة الرس يعانون من الدكاتره مافيه احد يوصل المعلومة", "ممتاز"], ["بيرفكت", "ممتاز"], ["شرح ممتاز الشهادة لله والله ثم والله شرحهها فوق التقييم", "ممتاز"], ["اشتركت بMIS243 والشرح مره جميل وواضح ويثبت في الراس", "ممتاز"], ["طريقه الشرح واضحه", "ممتاز"], ["الشرح مختصر ومفهوووووم مره ماشاءالله، تعطيك المهم وبطريقة واضحه بدون فلسفه،اول ما اخذت المادة كنت متورطه لان الشروحات اللي فيه طويله والصدق اطفش بسرعه واتشتت، بس مره ارتحت لما اشتركت🙏🏼", "ممتاز"], ["ممتازه جداً  الله يوفقها", "ممتاز"], ["اقسم بالله افضل طريقة شرح مرت علي ، كنت مو فاهم الماده ابدا لا بالميدات ولا قبل الفاينل وبديت ادرس قبل الفاينل بيومين وبسبب الله ثم شرح الاستاذه رنا طلعت من الفاينل ضامن B+ ولو شديت اكثر و عطيت الشرح حقه مستحيل انزل عن الـA+ الاستاذه غطت المنهج بكبيرها و صغيرها", "ممتاز"], ["ممتازه و واضحه", "ممتاز"], ["شرح ممتاز جداً جداً والشكر لك انتي ماقصرتي لكن يفضل شرح اسئلة من التسريبات او نماذج خارجية بحيث الطالب ياخذ خلفية كامله لان معروف دايم اسئلة السلايد اسهل شيء لكن اذا دخل الطالب الاختبار ينصدم بالموجود غير عن السلايد وشكرا مره ثانيه", "ممتاز"], ["شرح ممتاز وشامل وموضح جيد للسلايدات", "ممتاز"], ["جميله جدا ووصول الفكره رهيب مره", "ممتاز"], ["ممتازه جدا", "ممتاز"], ["طريقة الشرح رائعة تبارك الرحمن موضحه كل الاشياء", "ممتاز"], ["ممتاز ويوصل المعلومة", "ممتاز"], ["واضح جداً ومفهوم وطريقة الشرح سهلت علينا الماده كثير", "ممتاز"], ["جيده جدا ولولا الله ثم هي كان تصعبت الماده كثير", "جيد جدا"], ["رنا من افضللللل افضل الناس بالشرح والطريقه والاسلوب والمساعده عسل عسل الله يسعدها يارب ويوفقها", "ممتاز"], ["رائعه والله ، احس لازم مع كل فصل تشرحين كيف يجي طريقته بالاختبار 👍🏻", "ممتاز"], ["يحتاج إلى شرح اكثر وتزويد بالأفكار اكثر", "جيد جدا"], ["شرح وااضح جدا", "ممتاز"], ["ممتازة جدا", "ممتاز"], ["كانت جميلة جدًا والحمدلله بفضل اولا ثم فضلك جبت A", "ممتاز"], ["ممتازة واضح الشرح ومبسط", "ممتاز"], ["الشرح ما شاء الله مفهوم ومختصر", "يحتاج تحسين"]], "MIS354": [["جميل ولكن سريعة بالشرح", "يحتاج تحسين"], ["شرح ممتاز و واضح جداً وأيضا الاجابة على الاستفسارات جداً المقرر كامل", "ممتاز"], ["شرح بنفس تشاتبرات الجامعة ومن قلب وسلايدة سلايدة مع امثلة وتقول وش ممكن يجي او كيف ممكن يجي السؤال ، يعطيك العافية", "ممتاز"], ["ممتازة جدا سهلت علينا المنهج الله يجزاها خير", "ممتاز"], ["ممتازه", "ممتاز"], ["حبيت أشكرك على شرحك الرائع، بصراحة استفدت منك كثير وفهمت  بشكل أوضح وأسهل وأسلوبك في الشرح مرتب وواضح ويخلي المعلومة تثبت بسرعة. بفضل الله ثم شرحك قدرت أجيب درجة ممتازة جدًا وأنا مبسوطة بالنتيجة.\nوأي شخص متردد يشترك معك أنصحه وبقوة يجرب، لأنك فعلاً تهتمين بالطالب وتوصلين المعلومة بطريقة سهلة", "ممتاز"], ["جميل", "ممتاز"], ["حلو", "ممتاز"], ["جميله جدا لكن فيه تفاصيل احيانا مو محتاجين لها", "ممتاز"], ["ممتاز", "ممتاز"], ["جميل وواضح الشرح وشامل لكل المنهج وتفصيل كل فصل بطريقه جميل وتوصل المعلومه بكل امانه", "ممتاز"], ["الصراحه طريقة الشرح كويييييسه مره لكن تمنيت كل جزئية تكون بمقطع بحيث لو ابي ارجع لها بعدين تصير واضحه وعلى طول ارجع لها", "ممتاز"], ["جدًا ممتازة ومفهومه", "ممتاز"], ["الشرح رائع جدا ومفهوم وتوصيل المعلومه بطريقه سهله وبسيطه المنهج صار جدا مفهوم بالنسبه لي", "ممتاز"]], "MIS353": [["جميل", "ممتاز"], ["الصراحه طريقة الشرح كويييييسه مره لكن تمنيت كل جزئية تكون بمقطع بحيث لو ابي ارجع لها بعدين تصير واضحه وعلى طول ارجع لها", "ممتاز"], ["الشرح رائع جدا ومفهوم وتوصيل المعلومه بطريقه سهله وبسيطه المنهج صار جدا مفهوم بالنسبه لي", "ممتاز"]]};
+const v=document.getElementById('v');
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+function hero(title,small,back){
+  const h=el('header','hero'+(small?' s':''));
+  if(back){const b=el('button','back','→ رجوع');b.onclick=()=>location.hash=back;h.appendChild(b)}
+  else h.appendChild(el('span','badge','نتائج استبيان رأي الطلاب'));
+  h.appendChild(el('h1','',title));return h}
+function home(){
+  v.replaceChildren();
+  const top=el('header','top');
+  top.appendChild(el('h1','','آراء الطلاب في شرح المقررات'));
+  v.appendChild(top);
+  const sh=el('section','sheet');
+  sh.appendChild(el('div','sh','المقررات المشمولة'));
+  COURSES.forEach(c=>{const r=el('div','row',c[1]);r.appendChild(el('small','',c[0]));sh.appendChild(r)});
+  const act=el('div','act');
+  const b=el('button','cta','تصفّح الآراء حسب المقرر ←');b.onclick=()=>location.hash='#/courses';act.appendChild(b);sh.appendChild(act);
+  const f=el('div','foot');f.appendChild(el('i','','✓'));f.appendChild(el('span','','آراء حقيقية من طلاب مشتركين، معروضة كما وردت دون تعديل'));sh.appendChild(f);
+  v.appendChild(sh);
+  const F1='https://docs.google.com/forms/d/13yq7znDhVhg1XXmUC37pauGEGlm2ZXz_DIpE3QTorAM/viewform',F2='https://docs.google.com/forms/d/1-E_byGEIZfuoWi_-zB5RSCFJu74x9zE4P63MQQN7fiI/viewform';
+  const fc=el('section','fcard');
+  fc.appendChild(el('h3','','مشترك معنا؟ شاركنا رأيك'));
+  fc.appendChild(el('p','','اختر مقررك وقيّم الشرح:'));
+  const tl=el('div','tiles');
+  [['أسس برمجة','MIS243',F1],['برمجة الحاسب 2','MIS354',F2],['إدارة الشبكات','MIS353',F2]].forEach(c=>{
+    const a=el('a','tile');a.href=c[2];a.target='_blank';a.rel='noopener';
+    a.appendChild(el('small','',c[1]));a.append(c[0]);tl.appendChild(a)});
+  fc.appendChild(tl);
+  v.appendChild(fc)}
+function courses(){
+  v.replaceChildren();v.appendChild(hero('اختر المقرر',true,'#/'));
+  const w=el('div','wrap');w.appendChild(el('h2','','اختر المقرر لعرض آراء الطلاب فيه'));
+  const cs=el('div','cs');COURSES.forEach(c=>{const d=el('button','c',c[1]);d.appendChild(el('small','',c[0]));d.onclick=()=>location.hash='#/c/'+c[0];cs.appendChild(d)});
+  w.appendChild(cs);v.appendChild(w)}
+function reviews(code){
+  const c=COURSES.find(x=>x[0]==code);if(!c)return location.hash='#/courses';
+  v.replaceChildren();v.appendChild(hero(c[1],true,'#/courses'));
+  const t=el('div','tabs');COURSES.forEach(x=>{const b=el('button',x[0]==code?'on':'',x[1]);b.onclick=()=>location.hash='#/c/'+x[0];t.appendChild(b)});v.appendChild(t);
+  const w=el('div','wrap');w.style.paddingTop='14px';
+  DATA[code].forEach(r=>{const d=el('div','r');d.appendChild(el('div','t',r[0]));
+    const m=el('div','m','وضوح الشرح:');const k=r[1]=='ممتاز'?'a':r[1]=='يحتاج تحسين'?'c2':'b';m.appendChild(el('span','rt '+k,r[1]));d.appendChild(m);w.appendChild(d)});
+  v.appendChild(w);window.scrollTo(0,0)}
+function route(){const h=location.hash;
+  if(h.startsWith('#/c/'))reviews(h.slice(4));else if(h=='#/courses')courses();else home();window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
